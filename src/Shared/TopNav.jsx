@@ -1,18 +1,23 @@
 import { Navbar } from "keep-react";
 import { NavLink, useNavigate } from "react-router-dom";
 import SideBar from "./SideBar";
-import { useContext } from "react";
+import { useContext,} from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { FaSignOutAlt } from 'react-icons/fa';
+import useUsers from "../Component/Hook/useUsers";
 const TopNav = () => {
-  const {user,logOut} = useContext(AuthContext)
-   const navigate = useNavigate()
+ const [users] = useUsers()
+ console.log("the user is",users.result)
+  const {logOut,user} = useContext(AuthContext)
+  console.log(user)
+  const navigate = useNavigate()
+  
   const handleLogut = ()=> {
     logOut()
     navigate('/login')
   }
 
-
+ 
   return (
     <div className="lg:p-8 static ">
       {/* this is Navbar image */}
@@ -256,16 +261,25 @@ const TopNav = () => {
 
           <Navbar.Container className="flex gap-2">
 
-          { user?.email ?
+        {/* {
+          users.map((user,index)=> <span key={index}>
+
+          
+            
+            
+          </span>)
+        } */}
+        { 
+        user?.email ?
               <div className="w-10 !h-10 rounded-full flex flex-row justify-center items-center gap-8 mr-10 ">
               <div>
               <FaSignOutAlt onClick={handleLogut} className="text-xl text-[#DF5EA2] cursor-pointer"></FaSignOutAlt>
               </div>
 
                 <img
-                  title={user.displayName}
+                  title={user?.name}
                   className="rounded-full"
-                  src={user?.photoURL}
+                  src={user?.photo}
                 />
               </div>
              : 
@@ -282,6 +296,10 @@ const TopNav = () => {
             
             
             }
+
+
+
+
 
 
 

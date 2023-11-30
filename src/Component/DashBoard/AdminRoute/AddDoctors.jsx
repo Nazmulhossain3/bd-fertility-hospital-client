@@ -1,7 +1,8 @@
 import Swal from "sweetalert2";
 
 const AddDoctors = () => {
-
+ 
+ 
 const hanbdlAddDoctorSubmit = (event)=> {
 
     event.preventDefault();

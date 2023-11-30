@@ -1,11 +1,10 @@
 /* eslint-disable react/no-unknown-property */
 
-import { useContext } from "react";
+// import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Login = () => {
-    const {signIn} = useContext(AuthContext)
     const navigate = useNavigate()
  
     const handleLoginSubmit = (event)=> {
@@ -14,15 +13,46 @@ const Login = () => {
         const email = form.email.value
         const password = form.password.value 
 
-        
+        const user = {
+            email,
+            password
+        }
 
-       signIn(email,password)
-       .then(result => {
-        const logedInUser = result.user 
-        console.log(logedInUser)
-        navigate('/')
-       })
-    }
+        fetch('http://localhost:5000/user-route/login',{
+            method : 'POST',
+         headers : {
+                    "content-type" : "application/json"
+                },
+         body : JSON.stringify(user)
+        })
+
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data === 'success'){
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Login Successfully",
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+                navigate('/')
+            } else{
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "check your email and password",
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+            }
+            
+        })
+   
+ 
+
+}
 
 
 

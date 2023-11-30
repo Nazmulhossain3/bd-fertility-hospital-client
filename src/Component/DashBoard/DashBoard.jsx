@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import { FaHome, FaPlusSquare, FaUserMd, FaUserPlus } from "react-icons/fa";
+import { FaBlog, FaHome, FaPlusSquare, FaUserMd, FaUserPlus } from "react-icons/fa";
 
 
 const DashBoard = () => {
@@ -14,12 +14,14 @@ const DashBoard = () => {
   </div> 
   <div className="drawer-side">
     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label> 
-    <ul className="menu pt-32 text-center w-80 min-h-full bg-[#DF5EA2] text-white text-xl">
+    <ul className="menu pt-32 text-center w-80 min-h-full bg-[#DF5EA2] text-white text-inherit">
       {/* Sidebar content here */}
-      <li><Link to='/dashboard/addFeatures'><FaPlusSquare></FaPlusSquare> Add Features</Link></li>
-      <li><Link to='/dashboard/addDoctor' className="text-white"><FaUserMd></FaUserMd> Add Doctor</Link></li>
-      <li><Link to='/dashboard/manageUsers' className="text-white"> <FaUserPlus></FaUserPlus> Manage Users</Link></li>
-      <li>  <Link to='/'><FaHome className="text-white"></FaHome> Home</Link></li>
+      <li><Link to='/dashboard/addFeatures'><FaPlusSquare></FaPlusSquare> ফিচার এডড করুন</Link></li>
+      <li><Link to='/dashboard/addDoctor' className="text-white"><FaUserMd></FaUserMd> ডাক্তার এডড করুন</Link></li>
+      <li><Link to='/dashboard/manageUsers' className="text-white"> <FaUserPlus></FaUserPlus> ইউজার ম্যানেজ</Link></li>
+      <li><Link to='/dashboard/addBlog' className="text-white"> <FaBlog></FaBlog>  ব্লগ  এডড করুন </Link></li>
+    
+      <li>  <Link to='/'><FaHome className="text-white"></FaHome> হোম</Link></li>
     </ul>
   
   </div>
