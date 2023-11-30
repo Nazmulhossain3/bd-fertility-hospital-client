@@ -32,7 +32,7 @@ const AddFeatures = () => {
                 Swal.fire({
                     position: "top-end",
                     icon: "success",
-                    title: "Your work has been saved",
+                    title: "Yeah! Features is added",
                     showConfirmButton: false,
                     timer: 1500
                   });

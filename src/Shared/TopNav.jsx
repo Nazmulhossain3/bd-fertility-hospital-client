@@ -41,7 +41,7 @@ const TopNav = () => {
               <p className=" relative group">
                 <span>
                   {" "}
-                  <NavLink className="hover:text-[#DF5EA2]" to="প্রথম পাতা">
+                  <NavLink className="hover:text-[#DF5EA2]" to="/">
                     প্রথম পাতা
                   </NavLink>
                 </span>
@@ -234,7 +234,7 @@ const TopNav = () => {
                 <p className=" relative group">
                   <span>
                     {" "}
-                    <NavLink className="hover:text-[#DF5EA2]">গ্যালারি</NavLink>
+                    <NavLink to='/gallery' className="hover:text-[#DF5EA2]">গ্যালারি</NavLink>
                   </span>
                   <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-[#DF5EA2] group-hover:w-1/2 group-hover:transition-all"></span>
                   <span className="absolute -bottom-1 right-1/2 w-0 h-0.5 bg-[#DF5EA2] group-hover:w-1/2 group-hover:transition-all"></span>

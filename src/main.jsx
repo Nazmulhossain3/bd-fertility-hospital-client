@@ -16,6 +16,7 @@ import AddDoctors from './Component/DashBoard/AdminRoute/AddDoctors';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'; // Import from '@tanstack/react-query'
 import ManageUsers from './Component/DashBoard/AdminRoute/ManageUser/ManageUsers';
 import AddBlog from './Pages/Home/Blogs/AddBlog';
+import Gallery from './Pages/Gallery/Gallery';
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
         path: '/register',
         element: <Register></Register>,
       },
+      {
+        path : '/gallery',
+        element : <Gallery></Gallery>
+      }
     ],
   },
   {

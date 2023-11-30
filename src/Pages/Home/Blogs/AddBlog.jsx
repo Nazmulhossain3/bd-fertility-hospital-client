@@ -1,10 +1,43 @@
+import Swal from "sweetalert2";
 
 const AddBlog = () => {
 
 
     const hanbdlAddBlog = (event)=> {
         event.preventDefault()
-        
+        const form = event.target 
+        const title = form.title.value 
+        const photo = form.photo.value 
+        const description = form.description.value 
+
+        const blog = {
+            title,
+            photo,
+            description
+        }
+        console.log(blog)
+
+        fetch('http://localhost:5000/blog-route/createBlog',{
+            method : "POST",
+            headers : {
+                "content-type" : "application/json",
+            },
+            body : JSON.stringify(blog)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data){
+                form.reset()
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Great! Blog is Added",
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+            }
+        })
     }
 
 
@@ -40,7 +73,7 @@ const AddBlog = () => {
               </label>{" "}
               <input
                 type="text"
-                name="img"
+                name="photo"
                 className="bg-gray-100 border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full"
                 placeholder="Enter Blog photo"
               />{" "}
