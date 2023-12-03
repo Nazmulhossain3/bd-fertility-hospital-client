@@ -2,7 +2,7 @@ import { Carousel } from "keep-react";
 const GalleryCarusel = () => {
     return (
         <div className="py-6">
-             <Carousel className="lg:!h-[600px]" slideInterval={5000} showControls={true} indicators={true}>
+             <Carousel className="lg:!h-[450px]" slideInterval={5000} showControls={true} indicators={true}>
       <img
         src="https://miro.medium.com/v2/resize:fit:1100/format:webp/0*zeiDlGKGJcfY12IM"
         alt="slider-1"

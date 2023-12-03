@@ -4,11 +4,11 @@ const ServiceGallary = () => {
     const [images,setImgaes] = useState([])
 
     useEffect(()=>{
-        fetch('OurService.json')
+        fetch('http://localhost:5000/Gallery-route/getAllServiceGallery')
         .then(res =>res.json())
         .then(data => {
             console.log(data)
-            setImgaes(data)
+            setImgaes(data.result)
         })
     },[])
     return (
