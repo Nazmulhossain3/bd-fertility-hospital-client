@@ -16,7 +16,7 @@ const RecentBlog = () => {
   }, []);
 
   useEffect(() => {
-    AOS.init({ duration: 2000 });
+    AOS.init({ duration: 1000 });
   }, []);
   return (
     <div>
@@ -37,7 +37,6 @@ const RecentBlog = () => {
                 key={index}
                 data-aos="fade-zoom-in"
                 data-aos-easing="ease-in-back"
-                data-aos-delay="100"
                 data-aos-offset="0"
                 className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30"
               >

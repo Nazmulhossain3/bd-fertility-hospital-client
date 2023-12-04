@@ -8,8 +8,8 @@ const Footer = () => {
         <div className="-mx-4 flex flex-wrap justify-between">
           <div className="px-4 my-4 w-full xl:w-1/5">
             <a href="/" className="block w-56 mb-10">
-             <img src="https://www.bdfertilityhospital.com/wp-content/uploads/2022/03/BD-Fertility-Hospital-Dhaka-1.png" alt="" />
-    
+             {/* <img src="https://i.ibb.co/VHxGCpR/BD-Fertility-Hospital-Dhaka.png" alt="" />
+     */}
             </a>
             <p className="text-justify pt-4">
             যোগাযোগঃ 
