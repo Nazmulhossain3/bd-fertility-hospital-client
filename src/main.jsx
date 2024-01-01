@@ -17,6 +17,8 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'; // Imp
 import ManageUsers from './Component/DashBoard/AdminRoute/ManageUser/ManageUsers';
 import AddBlog from './Pages/Home/Blogs/AddBlog';
 import Gallery from './Pages/Gallery/Gallery';
+import FrequentlyAsked from './Pages/General-Discussion/FrequentlyAsked';
+import IUI from './Pages/Treatement/IUI/IUI';
 
 const queryClient = new QueryClient();
 
@@ -40,6 +42,18 @@ const router = createBrowserRouter([
       {
         path : '/gallery',
         element : <Gallery></Gallery>
+      },
+      {
+        path : '/logout',
+        element : <Login></Login>
+      },
+      {
+        path : '/faq',
+        element : <FrequentlyAsked></FrequentlyAsked>
+      },
+      {
+        path : '/IUI',
+        element : <IUI></IUI>
       }
     ],
   },

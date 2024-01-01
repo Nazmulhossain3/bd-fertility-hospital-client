@@ -1,6 +1,7 @@
 import UsersTable from "./UsersTable";
 import useUsers from "../../../Hook/useUsers";
 import { useEffect, useState } from "react";
+import { baseURL } from "../../../../config/config";
 
 const ManageUsers = () => {
   const [users, refetch] = useUsers();
@@ -9,7 +10,7 @@ const ManageUsers = () => {
 
   const handleSearch = () => {
    
-    fetch(`http://localhost:5000/user-route/search/${searchText}`)
+    fetch(`${baseURL}/user-route/search/${searchText}`)
       .then(res => res.json())
       .then(data => {
         console.log(data)
@@ -23,7 +24,7 @@ const ManageUsers = () => {
   };
 
   useEffect(() => {
-  fetch('http://localhost:5000/user-route/getAllUser')
+  fetch(`${baseURL}/user-route/getAllUser`)
   .then(res => res.json())
   .then(data => {
     refetch()

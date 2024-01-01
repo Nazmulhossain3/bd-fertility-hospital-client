@@ -1,4 +1,5 @@
 import Swal from "sweetalert2";
+import { baseURL } from "../../../config/config";
 
 const AddBlog = () => {
 
@@ -17,7 +18,7 @@ const AddBlog = () => {
         }
         console.log(blog)
 
-        fetch('http://localhost:5000/blog-route/createBlog',{
+        fetch(`${baseURL}/blog-route/createBlog`,{
             method : "POST",
             headers : {
                 "content-type" : "application/json",

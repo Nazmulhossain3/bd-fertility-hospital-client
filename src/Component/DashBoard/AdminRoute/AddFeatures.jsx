@@ -1,4 +1,5 @@
 import Swal from "sweetalert2";
+import { baseURL } from "../../../config/config";
 
 const AddFeatures = () => {
 
@@ -17,7 +18,7 @@ const AddFeatures = () => {
         }
         console.log(features)
 
-        fetch('http://localhost:5000/bd-fertility/create',{
+        fetch(`${baseURL}/bd-fertility/create`,{
             method : 'POST',
             headers : {
                 "content-type" : 'application/json'

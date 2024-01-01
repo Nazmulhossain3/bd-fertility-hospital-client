@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import FeaturesCard from "./Cards.jsx/FeaturesCard";
+import { baseURL } from "../../config/config";
 
 const Features = () => {
     const [features,setFeatures] = useState([])
 
     useEffect(()=>{
 
-        fetch('http://localhost:5000/bd-fertility/getAllFeatures')
+        fetch(`${baseURL}/bd-fertility/getAllFeatures`)
         .then(res => res.json())
         .then(data => {
           

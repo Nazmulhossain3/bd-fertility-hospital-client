@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import Swal from "sweetalert2";
+import { baseURL } from "../../../../config/config";
 
 
 
@@ -20,7 +21,7 @@ const UsersTable = ({users,refetch}) => {
               }).then((result) => {
                 if (result.isConfirmed) {
                  
-                  fetch(`http://localhost:5000/user-route/deleteUser/${person._id}`,{
+                  fetch(`${baseURL}/user-route/deleteUser/${person._id}`,{
                       method : 'DELETE'
                   })
                     .then((res) => res.json())
@@ -40,7 +41,7 @@ const UsersTable = ({users,refetch}) => {
     
         const handleMakeUserToAdmin = (person)=> {
            if(person.role === 'user'){
-            fetch(`http://localhost:5000/user-route/makeAdmin/${person._id}`,{
+            fetch(`${baseURL}/user-route/makeAdmin/${person._id}`,{
                 method : 'PUT'
             })
             .then(res => res.json())
@@ -58,7 +59,7 @@ const UsersTable = ({users,refetch}) => {
                }
             })
            }else{
-            fetch(`http://localhost:5000/user-route/makeUser/${person._id}`,{
+            fetch(`${baseURL}/user-route/makeUser/${person._id}`,{
                 method : 'PUT'
             })
             .then(res => res.json())

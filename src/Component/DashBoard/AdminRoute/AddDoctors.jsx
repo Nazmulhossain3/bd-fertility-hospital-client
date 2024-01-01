@@ -1,4 +1,5 @@
 import Swal from "sweetalert2";
+import { baseURL } from "../../../config/config";
 
 const AddDoctors = () => {
  
@@ -34,7 +35,7 @@ const hanbdlAddDoctorSubmit = (event)=> {
 
     console.log(doctorData);
 
-    fetch('http://localhost:5000/doctor-route/create',{
+    fetch(`${baseURL}/doctor-route/create`,{
         method : "POST",
         headers : {
             "content-type" : "application/json",

@@ -1,19 +1,35 @@
 import { Navbar } from "keep-react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import SideBar from "./SideBar";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { FaSignOutAlt } from "react-icons/fa";
-import useUsers from "../Component/Hook/useUsers";
+import { baseURL } from "../config/config";
 const TopNav = () => {
-  const [users] = useUsers();
-  console.log("the user is", users.result);
-  const { logOut, user } = useContext(AuthContext);
-  console.log(user);
+
+  const { currentUser,setCurrentUserUser } = useContext(AuthContext);
+  const [user,setUser] = useState(null)
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const fetchData = async () => {
+      if (currentUser) {
+        try {
+          const response = await fetch(`${baseURL}/user-route/getSingleUser/${currentUser.email}`);
+          const data = await response.json();
+          setUser(data.result);
+        } catch (error) {
+          console.error('Error fetching user data', error);
+        }
+      }
+    };
+  
+    fetchData();
+  }, [currentUser]);
+  
+
   const handleLogut = () => {
-    logOut();
+   setCurrentUserUser(null)
     navigate("/login");
   };
 
@@ -95,9 +111,9 @@ const TopNav = () => {
 
                 {/* Menu list */}
                 <ul className="rounded absolute z-10 hidden text-gray-700 pt-8 w-56 group-hover:block text-sm ">
-                  <li className="bg-[#f1f1f1] py-2 px-4 cursor-pointer hover:text-[#DF5EA2]">
+                 <Link to='/IUI'> <li className="bg-[#f1f1f1] py-2 px-4 cursor-pointer hover:text-[#DF5EA2]">
                     আই ইউ আই (IUI)
-                  </li>
+                  </li></Link>
                   <li className="bg-[#f1f1f1] py-2 px-4 cursor-pointer hover:text-[#DF5EA2]">
                     আই ভি এফ (IVF)
                   </li>
@@ -207,7 +223,7 @@ const TopNav = () => {
               <p className=" relative group">
                 <span>
                   {" "}
-                  <NavLink className="hover:text-[#DF5EA2]">
+                  <NavLink to='/faq' className="hover:text-[#DF5EA2]">
                     সাধারণ জিজ্ঞাসা
                   </NavLink>
                 </span>
@@ -257,15 +273,8 @@ const TopNav = () => {
           </Navbar.Container>
 
           <Navbar.Container className="flex gap-2">
-            {/* {
-          users.map((user,index)=> <span key={index}>
-
           
-            
-            
-          </span>)
-        } */}
-            {user?.email ? (
+            {currentUser?.email && user ?(
               <div className="w-10 !h-10 rounded-full flex flex-row justify-center items-center gap-8 mr-10 ">
                 <div>
                   <FaSignOutAlt
@@ -273,7 +282,7 @@ const TopNav = () => {
                     className="text-xl text-[#DF5EA2] cursor-pointer"
                   ></FaSignOutAlt>
                 </div>
-
+               
                 <img
                   title={user?.name}
                   className="rounded-full"

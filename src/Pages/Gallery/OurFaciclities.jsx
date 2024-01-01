@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
+import { baseURL } from "../../config/config";
 
 const OurFaciclities = () => {
     const [images,setImgaes] = useState([])
 
     useEffect(()=>{
-        fetch('http://localhost:5000/Gallery-route/getAllFacilities')
+        fetch(`${baseURL}/Gallery-route/getAllFacilities`)
         .then(res =>res.json())
         .then(data => {
             console.log(data)

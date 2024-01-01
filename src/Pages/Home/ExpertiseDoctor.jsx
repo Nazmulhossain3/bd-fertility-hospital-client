@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import DoctorsCard from "./Cards.jsx/DoctorsCard";
+import { baseURL } from "../../config/config";
 
 const ExpertiseDoctor = () => {
     const [doctors, setDoctors] = useState([])
 
     useEffect(()=>{
 
-        fetch('http://localhost:5000/doctor-route/getAllDoctors')
+        fetch(`${baseURL}/doctor-route/getAllDoctors`)
         .then(res => res.json())
         .then(data => {
-            console.log(data.result)
             setDoctors(data.result)
         })
 
@@ -22,7 +22,7 @@ const ExpertiseDoctor = () => {
         
         <h2 className="py-6 text-center px-12 text-xl">দেশেই আন্তর্জাতিক মানের আইভিএফ/ আই ইউ আই বিশেষজ্ঞ চিকিৎসক দ্বারা পরিচালিত “বাংলাদেশ ফার্টিলিটি হাসপাতাল“। রয়েছে এ্যাপোলো হাসপাতালে দীর্ঘ ১০ বছরেরও বেশি কাজের অভিজ্ঞতা সম্পন্ন অভিজ্ঞ টিম। এছাড়াও রয়েছে বঙ্গবন্ধু শেখ মুজিব মেডিক্যাল বিশ্ববিদ্যালয়ের বন্ধ্যাত্ব বিভাগের অধ্যাপক ও বিভাগীয় প্রধান ডা. জেসমিন বানু ও ঢাকা মেডিকেল কলেজ হাসপাতালের বন্ধ্যাত্ব বিভাগের সাবেক বিভাগীয় প্রধান ডা. নিলুফার ইয়াসমিন ও সহযোগী অধ্যাপক ডা. ফ্লোরিডা রহমান।</h2>
     
-        <div className="grid grid-cols-1  md:grid-cols-2  lg:grid-cols-4 pt-12 gap-4">
+        <div className="grid grid-cols-1  md:grid-cols-2  lg:grid-cols-4 px-6 pt-12 gap-4">
             {
                 doctors.map((doctor,index)=> <div    key={index}>
 
