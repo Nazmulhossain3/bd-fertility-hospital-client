@@ -19,6 +19,8 @@ import AddBlog from './Pages/Home/Blogs/AddBlog';
 import Gallery from './Pages/Gallery/Gallery';
 import FrequentlyAsked from './Pages/General-Discussion/FrequentlyAsked';
 import IUI from './Pages/Treatement/IUI/IUI';
+import AllDoctors from './Pages/Doctot/AllDoctior/AllDoctors';
+import Appointment from './Component/Appointment/Appointment';
 
 const queryClient = new QueryClient();
 
@@ -54,6 +56,14 @@ const router = createBrowserRouter([
       {
         path : '/IUI',
         element : <IUI></IUI>
+      },
+      {
+        path : '/allDoctors',
+        element : <AllDoctors></AllDoctors>
+      },
+      {
+        path : '/appointment/:id',
+        element : <Appointment></Appointment>
       }
     ],
   },

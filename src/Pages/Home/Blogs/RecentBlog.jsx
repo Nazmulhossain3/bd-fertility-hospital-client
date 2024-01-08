@@ -42,7 +42,7 @@ const RecentBlog = () => {
               >
                 <div className="lg:h-96 lg:w-72">
                   <img
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
+                    className="h-full w-full  transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
                     src={blog.photo}
                     alt=""
                   />

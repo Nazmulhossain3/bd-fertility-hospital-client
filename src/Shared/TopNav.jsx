@@ -212,7 +212,7 @@ const TopNav = () => {
               <p className=" relative group">
                 <span>
                   {" "}
-                  <NavLink className="hover:text-[#DF5EA2]">
+                  <NavLink to='/allDoctors' className="hover:text-[#DF5EA2]">
                     বিশেষজ্ঞ দল
                   </NavLink>
                 </span>
