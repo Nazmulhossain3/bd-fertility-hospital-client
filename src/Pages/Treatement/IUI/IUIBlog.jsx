@@ -1,14 +1,14 @@
 const IUIBlog = () => {
   return (
     <div>
-      <div className="grid lg:grid-cols-2 px-24 lg:py-24 gap-10 ">
+      <div className="grid lg:grid-cols-2 px-24 lg:py-24 gap-10 opacity-90 ">
         <div className="">
-          <p className="text-2xl  font-bold mb-4">
+          <p className="text-2xl   mb-4 text-[#DF5EA2]">
             বাংলাদেশ ফার্টিলিটি হাসপাতাল IUI ক্লিনিক - বাংলাদেশের সেরা
             ফার্টিলিটি ক্লিনিক
           </p>
 
-          <p className="text-justify text-sm">
+          <p className="text-justify ">
             বাংলাদেশ ফার্টিলিটি বাংলাদেশের অন্যতম সেরা IVF সেন্টার যা
             বন্ধ্যাত্বের সমস্যায় জর্জরিত শত-শত দম্পতিকে তাদের পিতামাতা হওয়ার
             স্বপ্ন পূরণে সহায়তা করেছে। প্রিস্টিন কেয়ার এমন নারীদের জন্য আশার আলো
@@ -19,7 +19,7 @@ const IUIBlog = () => {
             আন্তর্জাতিক মানের চিকিৎসা প্রদান করে।
           </p>
 
-          <p className="text-justify text-sm mt-4">
+          <p className="text-justify  mt-4">
             {" "}
             বাংলাদেশ ফার্টিলিটি-এ বাংলাদেশের সেরা কিছু IUI বিশেষজ্ঞ রয়েছে।
             আমাদের প্রতিটি ফার্টিলিটি বিশেষজ্ঞ ও IUI ডাক্তাররা পুরুষদের
@@ -34,7 +34,7 @@ const IUIBlog = () => {
             অর্জনের সম্ভাবনা বৃদ্ধি করে।
           </p>
 
-          <p className="text-justify text-sm mt-4">
+          <p className="text-justify  mt-4">
             আমাদের প্রতিটি IUI কেন্দ্র বিশ্বমানের পরিকাঠামোয় সুসজ্জিত এবং অনুকূল
             ফলাফল পাওয়ার জন্য প্রয়োজনীয় বৈজ্ঞানিক পরীক্ষাগারগুলির সঙ্গে যুক্ত।
             এছাড়াও আমরা আপনার IUI চিকিৎসার প্রতিটি ধাপে চরম স্বচ্ছতার সাথে কাজ
@@ -55,8 +55,8 @@ const IUIBlog = () => {
       <div className="lg:px-24 grid lg:grid-cols-2 items-center md:grid-cols-2 grid-cols-1 gap-12 mb-4">
         <div className=" ">
 
-  <p className="text-2xl font-bold mt-6"> কাদের IUI চিকিৎসার জন্য বাছা হয়?</p>
-  <div className="text-sm">
+  <p className="text-2xl text-[#DF5EA2] mb-6"> কাদের IUI চিকিৎসার জন্য বাছা হয়?</p>
+  <div className="">
   <p className="mt-2">• ব্যাখ্যাতীত বন্ধ্যাত্ব </p>
   <p className="mt-2">• সার্ভিকাল বা জরায়ুমুখে মিউকাসের সমস্যা যা শুক্রাণুকে ডিম্বাণুর সাথে মিলিত হতে বাধা দেয়।</p>
   <p className="mt-2">• হালকা এন্ডোমেট্রিওসিস থাকলে</p>

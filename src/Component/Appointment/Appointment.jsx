@@ -1,7 +1,20 @@
 import { useParams } from "react-router-dom";
 import { FaPhoneAlt, FaTelegramPlane } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { baseURL } from "../../config/config";
 const Appointment = () => {
     const {id} = useParams()
+    const [singleDoctor, setSingleDoctor] = useState({});
+    
+    useEffect(()=>{
+        fetch(`${baseURL}/allDoctors-route/getSingleDoctorById/${id}`)
+        .then(res => res.json())
+        .then(data => {
+            setSingleDoctor(data.result)
+        })
+    },[id,setSingleDoctor])
+    console.log(singleDoctor);
+    console.log();
     return (
         <div className=" p-12 bg-[#6F2A6D] mb-6  ">
             
@@ -9,12 +22,12 @@ const Appointment = () => {
        <form action="">
        <p className="text-white text-3xl">অ্যাপয়েন্টমেন্ট বুক জন্য</p>
             <p className="mt-4 text-white mb-4 text-justify">আমাদের বিশেষজ্ঞদের সাথে কথা বলুন এবং অভিভাবকত্বের দিকে আপনার প্রথম পদক্ষেপ নিন। <br /> একটি অ্যাপয়েন্টমেন্ট বুক করতে বা একটি তদন্ত করতে, দয়া করে আপনার বিশদ বিবরণ দিন <br /> এবং আমরা আপনার কাছে ফিরে আসব।</p>
-         <div className="flex gap-4 mb-4">
-          <input className="text-sm py-3 px-24 " type="text" placeholder="Doctor Name" />
+         <div className="flex lg:flex-row md:flex-row flex-col gap-4 mb-4">
+          <input value={singleDoctor.name} className="text-sm py-3 px-24 " type="text" placeholder="Doctor Name" />
           <input className="text-sm py-3 px-24 " type="text" placeholder="Patient Name" />
           </div>
           
-          <div className="flex  gap-4">
+          <div className="flex  lg:flex-row md:flex-row flex-col gap-4">
           <input className="text-sm py-3 px-24 " type="text" placeholder="Number" />
           <input className="text-sm py-3 px-24 " type="text" placeholder="Email" />
           </div>

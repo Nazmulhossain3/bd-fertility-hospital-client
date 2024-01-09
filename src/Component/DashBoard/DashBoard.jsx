@@ -14,7 +14,7 @@ const DashBoard = () => {
   </div> 
   <div className="drawer-side">
     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label> 
-    <ul className="menu pt-32 text-center w-80 min-h-full bg-[#DF5EA2] text-white text-inherit">
+    <ul className="menu pt-32 text-center w-80 min-h-full bg-[#6F2A6D] text-white text-xl">
       {/* Sidebar content here */}
       <li><Link to='/dashboard/addFeatures'><FaPlusSquare></FaPlusSquare> ফিচার এডড করুন</Link></li>
       <li><Link to='/dashboard/addDoctor' className="text-white"><FaUserMd></FaUserMd> ডাক্তার এডড করুন</Link></li>

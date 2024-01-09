@@ -43,11 +43,11 @@ const AddFeatures = () => {
 
 
   return (
-    <div>
+    <div className="bg-slate-100">
       <div className="p-8 rounded border border-gray-200">
         {" "}
-        <h1 className="font-medium text-3xl">Add A Book</h1>{" "}
-        <form onSubmit={hanbdlBookSubmit}>
+        <h1 className="font-medium text-center inline border-b-4 border-[#DF5EA2] text-3xl">Add A Feature</h1>{" "}
+        <form className="p-12" onSubmit={hanbdlBookSubmit}>
           {" "}
           <div className="mt-8 grid lg:grid-cols-2 gap-4">
             {" "}
@@ -56,12 +56,12 @@ const AddFeatures = () => {
               
                 className="text-sm text-gray-700 block mb-1 font-medium"
               >
-               title
+               Title
               </label>
               <input
                 type="text"
                 name="title"
-                className="bg-gray-100 border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full"
+                className=" border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full"
                 placeholder="Enter your name"
               />{" "}
             </div>{" "}
@@ -76,7 +76,7 @@ const AddFeatures = () => {
               <input
                 type="text"
                 name="img"
-                className="bg-gray-100 border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full"
+                className="  border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full"
                 placeholder="your photo"
               />{" "}
             </div>{" "}
@@ -88,7 +88,7 @@ const AddFeatures = () => {
               >
               Description
               </label>{" "}
-             <textarea type='text' name="description" id="" cols="70" rows="7" className="text-sm bg-gray-100  text-gray-700 block mb-1 font-medium border-2"></textarea>
+             <textarea type='text' name="description" id="" cols="70" rows="7" className="text-sm  p-2 text-gray-700 block mb-1 font-medium  " placeholder="Description"  ></textarea>
             </div>{" "}
             
           </div>{" "}
@@ -100,9 +100,7 @@ const AddFeatures = () => {
             >
               Save
             </button>{" "}
-            <button className="py-2 px-4 bg-white border border-gray-200 text-gray-600 rounded hover:bg-gray-100 active:bg-gray-200 disabled:opacity-50">
-              Cancel
-            </button>{" "}
+           
           </div>{" "}
         </form>{" "}
       </div>

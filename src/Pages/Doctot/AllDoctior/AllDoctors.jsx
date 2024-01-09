@@ -2,12 +2,13 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { baseURL } from "../../../config/config";
 
 const AllDoctors = () => {
 
     const [doctors,setDoctors] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:8000/allDoctors-route/getAllDoctors2')
+        fetch(`${baseURL}/allDoctors-route/getAllDoctors2`)
         .then(res => res.json())
         .then(data => {
             setDoctors(data.result)

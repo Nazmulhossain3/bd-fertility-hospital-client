@@ -114,13 +114,15 @@ const TopNav = () => {
                  <Link to='/IUI'> <li className="bg-[#f1f1f1] py-2 px-4 cursor-pointer hover:text-[#DF5EA2]">
                     আই ইউ আই (IUI)
                   </li></Link>
+                  <Link to='/IVF' >
                   <li className="bg-[#f1f1f1] py-2 px-4 cursor-pointer hover:text-[#DF5EA2]">
                     আই ভি এফ (IVF)
                   </li>
+                  </Link>
 
-                  <li className="bg-[#f1f1f1] hover:text-[#DF5EA2] py-2 px-4 cursor-pointer">
+                 <Link to='/ICSI' > <li className="bg-[#f1f1f1] hover:text-[#DF5EA2] py-2 px-4 cursor-pointer">
                     আই সি এস আই (ICSI)
-                  </li>
+                  </li></Link>
                   <li className="bg-[#f1f1f1] hover:text-[#DF5EA2] py-2 px-4 cursor-pointer">
                     মেয়েদের বন্ধ্যাত্ব যাচাই (Infertility Assessment – Female)
                   </li>
@@ -234,7 +236,7 @@ const TopNav = () => {
               <p className=" relative group">
                 <span>
                   {" "}
-                  <NavLink className="hover:text-[#DF5EA2]">ব্লগ</NavLink>
+                  <NavLink to='/allBlogs' className="hover:text-[#DF5EA2]">ব্লগ</NavLink>
                 </span>
                 <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-[#DF5EA2] group-hover:w-1/2 group-hover:transition-all"></span>
                 <span className="absolute -bottom-1 right-1/2 w-0 h-0.5 bg-[#DF5EA2] group-hover:w-1/2 group-hover:transition-all"></span>

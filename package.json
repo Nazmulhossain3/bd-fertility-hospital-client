@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@tanstack/react-query": "^5.8.9",
+    "@tanstack/react-query": "^5.17.9",
     "aos": "^2.3.4",
     "firebase": "^10.6.0",
     "keep-react": "^1.1.0",
