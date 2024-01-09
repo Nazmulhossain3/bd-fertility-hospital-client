@@ -2,8 +2,8 @@ import GlobalAppointment from "../../../Component/Appointment/GlobalAppoinment/G
 
 const IVF = () => {
     return (
-      <div className="bg-[#FFFFFF] opacity-90 ">
-          <div className="grid lg:grid-cols-2 p-12 gap-10">
+      <div className="bg-[#FFFFFF] opacity-90 p-12">
+          <div className="grid lg:grid-cols-2 py-12 gap-10">
           <div className="">
           <p className="text-2xl mb-2 text-[#DF5EA2] ">আইভিএফ(IVF) এর খরচ কত এবং এতে কি কি অন্তর্ভুক্ত আছে?</p>
            <img className="" src="https://www.rmany.com/media/pages/blog/the-ivf-process-how-does-it-work/feb109db90-1666120892/the-ivf-process-how-does-it-work.jpg" alt="" />
@@ -23,7 +23,7 @@ const IVF = () => {
 
         </div>
 
-        <div className="p-12 text-justify">
+        <div className=" text-justify">
             <p className="text-2xl mb-3 text-[#DF5EA2]">IVF-এ বিনিয়োগ করা</p>
             <p className="mb-3">গর্ভধারণ করতে ব্যর্থ এমন সব মহিলা ও দম্পতিদের ক্ষেত্রে আই ভি এফ একটি অত্যন্ত জনপ্রিয় চিকিৎসা পদ্ধতি । এন্ডোমেট্রিওসিস (একটি ব্যাধি যা জরায়ুর অভ্যন্তরীণ আবরণের অস্বাভাবিক বৃদ্ধি ঘটায়), শুক্রাণু বা ডিমের অপর্যাপ্ত উৎপাদন, কম বা অনিয়মিত ডিম্বস্ফোটন এবং ডিম বা শুক্রাণুকে ক্ষতি করে এমন অ্যান্টিবডির উপস্থিতির চিকিৎসার জন্য IVF সুপারিশ করা যেতে পারে। জেনেটিক ডিসঅর্ডারে আক্রান্ত রোগী যা তাদের বংশধররা উত্তরাধিকারসূত্রে পেতে পারে, তারাও IVF থেকে উপকৃত হতে পারে।</p>
 
@@ -40,7 +40,7 @@ const IVF = () => {
         </div>
 
 
-        <div className="px-12 text-justify">
+        <div className=" text-justify">
             <p className="text-2xl mb-4 text-[#DF5EA2]">মোট আনুমানিক খরচ</p>
             <p className="mb-6">BDfertility IVF-এ IVF-ICSI-এর খরচ 1.20 লক্ষ থেকে শুরু হয় এবং 1.60 লক্ষ পর্যন্ত যায়। এর মধ্যে রয়েছে 4টি পরামর্শ এবং আল্ট্রাসাউন্ড স্ক্যান, পদ্ধতির চার্জ, ল্যাব চার্জ, বিশেষজ্ঞের চার্জ, নার্সিং চার্জ এবং ওভাম পিক আপ ও ভ্রূণ স্থানান্তরের সময় ইন-পেশেন্ট চার্জ। । এর মধ্যে ফার্টিলিটি বৃদ্ধিকারী সার্জারির খরচ, ERA (এন্ডোমেট্রিয়াল রিসেপ্টিভিটি অ্যারে), পিজিটি(PGT), ফার্টিলিটি বিশেষজ্ঞের দ্বারা নির্ধারিত আই ভি এফ এর ওষুধ ছাড়া অন্য ওষুধের খরচ অন্তর্ভুক্ত নয়। এছাড়াও, প্রতিটি অতিরিক্ত ভ্রূণ স্থানান্তরের জন্য ল্যাব এবং প্রসিডিওর রুম ব্যবহারের জন্য একটি ন্যূনতম খরচ থেকে থাকে । ভ্রূণ হিমায়িত করার খরচ আলাদা ভাবে নেওয়া হয় I</p>
 
@@ -49,7 +49,7 @@ const IVF = () => {
 </p>
         </div>
 
-        <div className="p-12">
+        <div className="py-12">
             <p className="text-2xl mb-4 text-[#DF5EA2]">কেন BDFertility বেছে নেবেন?</p>
             <p className="mb-1">• ফার্টিলিটি বিশেষজ্ঞ যারা সেল্ফ-সাইকেলে ফোকাস করেন যাতে দম্পতিদের নিজস্ব বংশধর থাকে</p>
             <p className="mb-1">• নিরাপদ গর্ভাবস্থা নিশ্চিত করতে এবং মা ও শিশুর শারীরিক জটিলতা এড়াতে সিঙ্গেল ভ্রূণ স্থানান্তর</p>

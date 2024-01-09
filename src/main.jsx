@@ -24,6 +24,8 @@ import Appointment from './Component/Appointment/Appointment';
 import AllBlogs from './Pages/Blogs/AllBlogs';
 import IVF from './Pages/Treatement/IVF/IVF';
 import ICSI from './Pages/Treatement/ICSI/ICSI';
+import FemaleInfertility from './Pages/Treatement/Infertility/FemaleInfertility';
+import MaleINfertility from './Pages/Treatement/Infertility/MaleINfertility';
 
 const queryClient = new QueryClient();
 
@@ -79,6 +81,14 @@ const router = createBrowserRouter([
       {
         path : '/ICSI',
         element : <ICSI></ICSI>
+      },
+      {
+        path : '/femaleInfertility',
+        element : <FemaleInfertility></FemaleInfertility>
+      },
+      {
+        path : '/maleInFertility',
+        element : <MaleINfertility></MaleINfertility>
       }
     ],
   },

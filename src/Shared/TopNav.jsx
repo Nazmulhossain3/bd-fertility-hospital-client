@@ -123,12 +123,12 @@ const TopNav = () => {
                  <Link to='/ICSI' > <li className="bg-[#f1f1f1] hover:text-[#DF5EA2] py-2 px-4 cursor-pointer">
                     আই সি এস আই (ICSI)
                   </li></Link>
-                  <li className="bg-[#f1f1f1] hover:text-[#DF5EA2] py-2 px-4 cursor-pointer">
+                <Link to='/femaleInfertility' >  <li className="bg-[#f1f1f1] hover:text-[#DF5EA2] py-2 px-4 cursor-pointer">
                     মেয়েদের বন্ধ্যাত্ব যাচাই (Infertility Assessment – Female)
-                  </li>
-                  <li className="bg-[#f1f1f1] hover:text-[#DF5EA2] py-2 px-4 cursor-pointer">
+                  </li></Link>
+                 <Link to='/maleInFertility'> <li className="bg-[#f1f1f1] hover:text-[#DF5EA2] py-2 px-4 cursor-pointer">
                     পুরুষের বন্ধ্যাত্ব যাচাই (Infertility Assessment – Male)
-                  </li>
+                  </li></Link>
                   <li className="bg-[#f1f1f1] hover:text-[#DF5EA2] py-2 px-4 cursor-pointer">
                     ভ্রূণতত্ব (Embryology)
                   </li>
