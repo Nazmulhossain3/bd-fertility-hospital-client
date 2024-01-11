@@ -257,7 +257,7 @@ const TopNav = () => {
                 <span>
                   {" "}
                   <NavLink
-                    to="dashboard/addFeatures"
+                    to="dashboard/"
                     className="hover:text-[#DF5EA2]"
                   >
                     {" "}

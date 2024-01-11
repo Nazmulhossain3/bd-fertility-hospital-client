@@ -6,7 +6,6 @@ import { baseURL } from "../../../../config/config";
 
 
 
-// eslint-disable-next-line react/prop-types
 const UsersTable = ({users,refetch}) => {
 
     const handleDeleteUser = (person)=> {

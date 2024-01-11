@@ -26,6 +26,9 @@ import IVF from './Pages/Treatement/IVF/IVF';
 import ICSI from './Pages/Treatement/ICSI/ICSI';
 import FemaleInfertility from './Pages/Treatement/Infertility/FemaleInfertility';
 import MaleINfertility from './Pages/Treatement/Infertility/MaleINfertility';
+import AllDoctorsForUser from './Component/DashBoard/UserRoute/AllDoctorsForUser';
+import MyAppointment from './Component/DashBoard/UserRoute/MyAppointment';
+import AppointmentSerial from './Component/DashBoard/AdminRoute/AppointmentSerial';
 
 const queryClient = new QueryClient();
 
@@ -96,6 +99,7 @@ const router = createBrowserRouter([
     path: '/dashboard',
     element: <DashBoard></DashBoard>,
     children: [
+      // this is for admin role 
       {
         path: 'addFeatures',
         element: <AddFeatures></AddFeatures>,
@@ -111,6 +115,24 @@ const router = createBrowserRouter([
       {
         path : 'addBlog',
         element : <AddBlog></AddBlog>
+      },
+      {
+        path : 'appointmentSerial',
+        element : <AppointmentSerial></AppointmentSerial>
+      },
+
+
+
+
+      // this is for user role
+
+      {
+        path : 'callDoctor',
+        element : <AllDoctorsForUser></AllDoctorsForUser>
+      },
+      {
+        path : 'myAppointment',
+        element : <MyAppointment></MyAppointment>
       }
     ],
   },

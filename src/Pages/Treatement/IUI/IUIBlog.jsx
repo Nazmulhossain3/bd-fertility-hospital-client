@@ -1,3 +1,5 @@
+import GlobalAppointment from "../../../Component/Appointment/GlobalAppoinment/GlobalAppointment";
+
 const IUIBlog = () => {
   return (
     <div>
@@ -71,6 +73,10 @@ const IUIBlog = () => {
 
 
         </div>
+
+       <div className="p-12">
+       <GlobalAppointment></GlobalAppointment>
+       </div>
     </div>
   );
 };
